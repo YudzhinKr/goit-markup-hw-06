@@ -235,6 +235,17 @@ main {
   max-width: 1440px;
 }
 
+@media (min-width: 428px) {
+  .main-focus {
+    padding: 0;
+    width: auto;
+    padding-left: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: none;
+  }
+}
+
 .main-focus-text {
   max-width: 496px;
 }
