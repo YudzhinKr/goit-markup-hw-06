@@ -1360,6 +1360,12 @@ main {
   color: #fff;
 }
 
+@media only screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
 .mobile-menu {
   padding: 0;
   margin: 0;
@@ -1371,12 +1377,6 @@ main {
   display: block;
   padding: 10px;
   text-decoration: none;
-}
-
-@media only screen (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
 }
 
 .mobile-menu-icon {
