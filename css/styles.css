@@ -77,7 +77,6 @@ img {
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
-  outline: 2px solid green;
 }
 
 @media screen and (min-width: 768px) {
@@ -88,10 +87,9 @@ img {
 
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1128px;
+    max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
-    outline: 2px solid red;
   }
 }
 
@@ -234,14 +232,23 @@ img {
 /* адрес */
 .address-list {
   font-style: normal;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
 }
 
 .address-list:last-child {
   margin-right: 0;
+}
+
+@media only screen and (min-width: 1158px) {
+  .address-list {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
 }
 
 .address-title .link,
@@ -254,9 +261,6 @@ img {
 .address-title .link:focus,
 .address-title .link:active {
   color: var(--active-link-color);
-}
-
-.header-addres {
 }
 
 @media only screen and (min-width: 768px) {
@@ -274,6 +278,7 @@ img {
     gap: 12px;
   }
 }
+
 /* оснований контент */
 /* перша секція  привартає  основну увагу та кнопка */
 main {
@@ -300,7 +305,7 @@ main {
   max-width: 1440px;
 }
 
-@media (min-device-pixel-ratio: 2),
+@media only screen and (min-width: 428px) and (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .main-focus {
@@ -318,7 +323,7 @@ main {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office.jpg);
+      url(../images/tablet@1x_result.jpg);
   }
 }
 
@@ -330,13 +335,31 @@ main {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office\ 1_desk@2x_result.jpg);
+      url(../images/tablet@2x_result.jpg);
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .main-focus {
     padding: 188px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office_desk@1x.jpg);
+  }
+}
+
+@media only screen and (min-width: 1158px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .main-focus {
+    padding: 188px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office_desk@2x_result.jpg);
   }
 }
 
@@ -352,6 +375,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 72px;
+  width: 320px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -361,6 +385,7 @@ main {
     line-height: 1.07;
     letter-spacing: 0.2px;
     margin-bottom: 36px;
+    width: 496px;
   }
 }
 
@@ -442,6 +467,12 @@ main {
   padding: 20px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
+}
+
+@media only screen and (max-width: 320px) {
+  .modal-window-content {
+    width: 320px;
+  }
 }
 
 .main-button:active .modal-window {
@@ -761,6 +792,12 @@ main {
   flex-basis: calc((100% - 48px) / 3);
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
+  .team-container {
+    width: 584px;
+  }
+}
+
 .main-title {
   text-align: center;
   text-transform: capitalize;
@@ -821,9 +858,16 @@ main {
 
 @media only screen and (min-width: 768px) {
   .our-team-list {
+    flex-basis: calc((100% - 24px) / 2);
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
+    max-width: 264px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .our-team-list {
+    flex-basis: calc((100% - 72px) / 4);
   }
 }
 
@@ -893,6 +937,12 @@ main {
 @media only screen and (min-width: 1158px) {
   .customers {
     padding: 120px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
+  .customers-container {
+    width: 584px;
   }
 }
 
@@ -982,6 +1032,12 @@ main {
   flex-wrap: wrap;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
+  .footer-container {
+    width: 584px;
+  }
+}
+
 .logo-slogan {
   margin-right: auto;
   margin-left: auto;
@@ -995,12 +1051,14 @@ main {
     margin-right: 0;
     margin-left: 0;
     margin-right: 24px;
+    margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .logo-slogan {
     margin-right: 120px;
+    margin-bottom: 0;
   }
 }
 
@@ -1035,6 +1093,7 @@ main {
 @media only screen and (min-width: 1158px) {
   .social-container {
     margin-right: 80px;
+    margin-bottom: 0;
   }
 }
 
@@ -1082,6 +1141,12 @@ main {
   display: flex;
   flex-direction: column;
   max-width: 420px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 428px) {
+  .sub-conteiner {
+    min-width: 290px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1140,6 +1205,12 @@ main {
   width: 100%;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 428px) {
+  .sub-email {
+    min-width: 290px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .sub-email {
     min-width: 264px;
@@ -1152,7 +1223,7 @@ main {
 
 .sub-btn {
   height: 40px;
-  max-width: 165px;
+  min-width: 165px;
   border-radius: 4px;
   background: var(--primary-first-brand-color);
   border: none;
@@ -1345,7 +1416,7 @@ main {
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
   z-index: 999;
 
-  transform: translateX(100%);
+  transform: translateX(150%);
   transition: transform 250ms ease-in-out;
 }
 
@@ -1379,6 +1450,10 @@ main {
   text-decoration: none;
 }
 
+.mobile-menu .link-one {
+  color: var(--active-link-color);
+}
+
 .mobile-menu-icon {
   stroke: var(--primary-second-brand-color);
 }
@@ -1401,6 +1476,12 @@ main {
   display: flex;
   gap: 40px;
   align-items: center;
+}
+
+@media only screen and (max-width: 430px) {
+  .mobile-menu-social {
+    gap: 16px;
+  }
 }
 
 .mobile-menu-social:hover,
@@ -1427,9 +1508,19 @@ main {
   }
 }
 
+.mobile-addres-list .link-tel {
+  color: var(--active-link-color);
+}
+
 .mobile-addres-mail {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 428px) {
+  .menu-container {
+    width: 320px;
+  }
 }
